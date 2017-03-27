@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class ChromeTest {
     @Test
@@ -14,15 +15,16 @@ public class ChromeTest {
            You also need to download the ChromeDriver executable
            https://sites.google.com/a/chromium.org/chromedriver/
          */
-        // String currentDir = System.getProperty("user.dir");
-        // String chromeDriverLocation = currentDir + "/tools/chromedriver/chromedriver.exe";
-        // System.setProperty("webdriver.chrome.driver", chromeDriverLocation);
-         System.setProperty("webdriver.chrome.driver", "/home/vyacheslav/delevop/selenium/chromedriver");
+//         String currentDir = System.getProperty("user.dir");
+//         String chromeDriverLocation = currentDir + "/tools/chromedriver/chromedriver.exe";
+//         System.setProperty("webdriver.chrome.driver", chromeDriverLocation);
+         System.setProperty("webdriver.chrome.driver", "C:\\selenium\\chromedriver.exe");
 
         //If you add the folder with chromedriver.exe to the path then you only need the following line
         // and you don't need to set the property as listed in the 3 lines above
         // e.g. D:\Users\Alan\Documents\github\startUsingSeleniumWebDriver\tools\chromedriver
         WebDriver driver = new ChromeDriver();
+//        WebDriver driver = new FirefoxDriver();
 
         driver.navigate().to("http://seleniumsimplified.com");
 
