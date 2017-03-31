@@ -12,13 +12,12 @@ public class WebSystemsPages extends ChromeDriverInit {
     protected ComentPage comentPage;
     protected Page budgetePage;
     protected FinishPage finishPage;
-    protected CityPage cityPage;
+    protected Page cityPage;
 
     @Before
     public void setUp() {
         super.setUp();
         initPages();
-        driver.navigate().to("https://web-systems.solutions");
     }
 
     private void initPages() {
@@ -32,7 +31,4 @@ public class WebSystemsPages extends ChromeDriverInit {
         cityPage = new CityPage(driver);
     }
 
-//    public void wait(page) {
-//        page.navigate();
-//    }
 }
