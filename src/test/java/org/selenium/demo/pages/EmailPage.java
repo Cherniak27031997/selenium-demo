@@ -3,28 +3,25 @@ package org.selenium.demo.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-/**
- * Created by web_systems on 17.03.2017.
- */
-public class EmailPage {
-    private WebDriver driver;
+public class EmailPage extends GeneralPage{
+
     public EmailPage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
-        this.driver = driver;
+        super(driver);
     }
     @FindBy(id="q2")
-    private WebElement emailtext;
+    private WebElement emailText;
 
     @FindBy(xpath = "/html/body/div[5]/div/div/div/div/div/div[2]/div[1]/button")
-    private WebElement emailclick;
+    private WebElement emailClick;
 
-    public void writeEmail(String text){
-        emailtext.sendKeys(text);
-
+    @Override
+    public void click() {
+        super.clickOnWebElement(emailClick);
     }
-    public void clickEmail(){
-        emailclick.click();
+
+    @Override
+    public void writeText(String text) {
+        super.writeToWebElement(emailText, text);
     }
 }

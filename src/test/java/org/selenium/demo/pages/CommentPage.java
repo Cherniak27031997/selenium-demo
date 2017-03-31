@@ -4,24 +4,25 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class NamePage extends GeneralPage {
+public class CommentPage extends GeneralPage {
 
-    public NamePage(WebDriver driver) {
+    public CommentPage(WebDriver driver) {
         super(driver);
     }
-    @FindBy(id = "q1")
-    private WebElement nameText;
+
+    @FindBy(id = "q4")
+    private WebElement commentText;
 
     @FindBy(xpath = "/html/body/div[5]/div/div/div/div/div/div[2]/div[1]/button")
-    private WebElement nameClick;
+    private WebElement commentClick;
 
     @Override
     public void click() {
-        super.clickOnWebElement(nameClick);
+        super.clickOnWebElement(commentClick);
     }
 
     @Override
     public void writeText(String text) {
-        super.writeToWebElement(nameText, text);
+        super.writeToWebElement(commentText, text);
     }
 }

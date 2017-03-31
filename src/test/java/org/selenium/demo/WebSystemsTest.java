@@ -18,28 +18,19 @@ public class WebSystemsTest extends WebSystemsPages {
     }
 
     private void populateInformation() throws InterruptedException {
-        TimeUnit.SECONDS.sleep(5);
-        homePage.clickHomePage();
-        TimeUnit.SECONDS.sleep(5);
-        namePage.writeName("test");
-        namePage.clickName();
-        TimeUnit.SECONDS.sleep(5);
-        emailPage.writeEmail("test@mail.com");
-        emailPage.clickEmail();
-        TimeUnit.SECONDS.sleep(5);
-        priorityPage.clickPriority();
-        priorityPage.clickBpiority();
-        TimeUnit.SECONDS.sleep(5);
-        comentPage.writeComent("testtestettetettetettetetettetetet");
-        comentPage.clickComent();
+        homePage.click();
+        namePage.writeText("test");
+        namePage.click();
+        emailPage.writeText("test@mail.com");
+        emailPage.click();
+        priorityPage.click();
+        comentPage.writeText("testtestettetettetettetetettetetet");
+        comentPage.click();
         budgetePage.writeText("10000000");
         budgetePage.click();
         cityPage.writeText("test");
         cityPage.click();
-        TimeUnit.SECONDS.sleep(5);
-        finishPage.clickFinish();
-        TimeUnit.SECONDS.sleep(5);
-        driver.findElement(By.id("en")).click();
+        finishPage.click();
         TimeUnit.SECONDS.sleep(5);
     }
 

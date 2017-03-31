@@ -21,11 +21,11 @@ public class CityPage extends GeneralPage {
 
     @Override
     public void click() {
-        super.click(cityClick);
+        super.clickOnWebElement(cityClick);
     }
 
     @Override
     public void writeText(String text) {
-        super.writeText(cityText, text);
+        super.writeToWebElement(cityText, text);
     }
 }

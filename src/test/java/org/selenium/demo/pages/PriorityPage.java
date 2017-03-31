@@ -3,27 +3,27 @@ package org.selenium.demo.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-/**
- * Created by web_systems on 17.03.2017.
- */
-public class PriorityPage {
-    private WebDriver driver;
+public class PriorityPage extends GeneralPage {
+
     public PriorityPage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
-        this.driver = driver;
+        super(driver);
     }
+
     @FindBy(xpath = "//*[@id=\"Слой_1\"]")
-    private WebElement priorityclick;
+    private WebElement priorityClick;
 
     @FindBy(xpath = "/html/body/div[5]/div/div/div/div/div/div[2]/div[1]/button")
-    private WebElement bpriorityclick;
+    private WebElement bpriorityClick;
 
-    public void clickPriority(){
-        priorityclick.click();
+    @Override
+    public void click() {
+        super.clickOnWebElement(priorityClick);
+        super.clickOnWebElement(bpriorityClick);
     }
-    public void clickBpiority(){
-        bpriorityclick.click();
+
+    @Override
+    public void writeText(String text) {
+        // nothing here
     }
 }

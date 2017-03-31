@@ -9,9 +9,10 @@ import org.selenium.demo.utils.ChromeDriverInit;
 
 public class ChromeTest extends ChromeDriverInit {
 
-    /** The following code is for the Chrome Driver
-     You also need to download the ChromeDriver executable
-     https://sites.google.com/a/chromium.org/chromedriver/
+    /**
+     * The following code is for the Chrome Driver
+     * You also need to download the ChromeDriver executable
+     * https://sites.google.com/a/chromium.org/chromedriver/
      */
     @Test
     public void testChromeDriver() {

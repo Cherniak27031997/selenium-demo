@@ -3,22 +3,23 @@ package org.selenium.demo.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-/**
- * Created by web_systems on 16.03.2017.
- */
-public class HomePage {
-    private WebDriver driver;
+public class HomePage extends GeneralPage {
+
     public HomePage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
-        this.driver = driver;
-    }
-   @FindBy(id = "btn-colorful")
-   private WebElement clientButton;
-
-    public void clickHomePage() {
-        clientButton.click();
+        super(driver);
     }
 
+    @FindBy(id = "btn-colorful")
+    private WebElement clientButton;
+
+    @Override
+    public void click() {
+        super.clickOnWebElement(clientButton);
+    }
+
+    @Override
+    public void writeText(String text) {
+        // nothing here
+    }
 }

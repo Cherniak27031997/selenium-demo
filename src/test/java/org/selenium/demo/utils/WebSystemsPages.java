@@ -5,13 +5,13 @@ import org.selenium.demo.pages.*;
 
 public class WebSystemsPages extends ChromeDriverInit {
 
-    protected HomePage homePage;
-    protected NamePage namePage;
-    protected EmailPage emailPage;
-    protected PriorityPage priorityPage;
-    protected ComentPage comentPage;
+    protected Page homePage;
+    protected Page namePage;
+    protected Page emailPage;
+    protected Page priorityPage;
+    protected Page comentPage;
     protected Page budgetePage;
-    protected FinishPage finishPage;
+    protected Page finishPage;
     protected Page cityPage;
 
     @Before
@@ -25,8 +25,8 @@ public class WebSystemsPages extends ChromeDriverInit {
         namePage = new NamePage(driver);
         emailPage = new EmailPage(driver);
         priorityPage = new PriorityPage(driver);
-        comentPage = new ComentPage(driver);
-        budgetePage = new BudgetePage(driver);
+        comentPage = new CommentPage(driver);
+        budgetePage = new BudgetPage(driver);
         finishPage = new FinishPage(driver);
         cityPage = new CityPage(driver);
     }

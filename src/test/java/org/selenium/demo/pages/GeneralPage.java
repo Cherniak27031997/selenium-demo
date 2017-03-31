@@ -23,12 +23,12 @@ public abstract class GeneralPage implements Page {
         }
     }
 
-    protected void click(WebElement element) {
+    void clickOnWebElement(WebElement element) {
         waitElement();
         element.click();
     }
 
-    protected void writeText(WebElement element, String text) {
+    void writeToWebElement(WebElement element, String text) {
         waitElement();
         element.sendKeys(text);
     }
