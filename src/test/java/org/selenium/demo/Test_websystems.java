@@ -27,8 +27,6 @@ public class Test_websystems extends GeneralTest {
         TimeUnit.SECONDS.sleep(5);
         namePage.writeName("test");
         namePage.clickName();
-
-        // driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
         TimeUnit.SECONDS.sleep(5);
         emailPage.writeEmail("test@mail.com");
         emailPage.clickEmail();
@@ -41,6 +39,9 @@ public class Test_websystems extends GeneralTest {
         TimeUnit.SECONDS.sleep(5);
         budgetePage.writeBudget("10000000");
         budgetePage.clickBudget();
+        TimeUnit.SECONDS.sleep(5);
+        cityPage.writeCity("test");
+        cityPage.clickCity();
         TimeUnit.SECONDS.sleep(5);
         finishPage.clickFinish();
         TimeUnit.SECONDS.sleep(5);

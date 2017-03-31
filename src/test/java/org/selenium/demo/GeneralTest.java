@@ -18,6 +18,7 @@ public class GeneralTest {
     public ComentPage comentPage;
     public BudgetePage budgetePage;
     public FinishPage finishPage;
+    public CityPage cityPage;
     public WebDriver driver;
 
     @Before
@@ -36,6 +37,7 @@ public class GeneralTest {
         comentPage = new ComentPage(driver);
         budgetePage = new BudgetePage(driver);
         finishPage = new FinishPage(driver);
+        cityPage = new CityPage(driver);
 
     }
 }
