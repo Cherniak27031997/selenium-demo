@@ -1,13 +1,8 @@
 package org.selenium.demo;
 
-import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-
+import org.selenium.demo.utils.WebSystemsPages;
 
 import java.util.concurrent.TimeUnit;
 
@@ -16,10 +11,10 @@ import static org.junit.Assert.assertEquals;
 /**
  * Created by web_systems on 15.03.2017.
  */
-public class Test_websystems extends GeneralTest {
+public class WebSystemsTest extends WebSystemsPages {
 
     @Test
-    public void startWebDriver() throws InterruptedException {
+    public void testCreateNewProject() throws InterruptedException {
         //  Thread.sleep(5000);
         TimeUnit.SECONDS.sleep(5);
         homePage.clickHomePage();
@@ -36,14 +31,16 @@ public class Test_websystems extends GeneralTest {
         TimeUnit.SECONDS.sleep(5);
         comentPage.writeComent("testtestettetettetettetetettetetet");
         comentPage.clickComent();
-        TimeUnit.SECONDS.sleep(5);
-        budgetePage.writeBudget("10000000");
-        budgetePage.clickBudget();
+//        TimeUnit.SECONDS.sleep(5);
+        budgetePage.writeText("10000000");
+        budgetePage.click();
         TimeUnit.SECONDS.sleep(5);
         cityPage.writeCity("test");
         cityPage.clickCity();
         TimeUnit.SECONDS.sleep(5);
         finishPage.clickFinish();
+        TimeUnit.SECONDS.sleep(5);
+        driver.findElement(By.id("en")).click();
         TimeUnit.SECONDS.sleep(5);
         assertEquals("Thanks. We contact with you as soon as possible", driver.findElement(By.cssSelector("p")).getText());
 
@@ -63,3 +60,4 @@ public class Test_websystems extends GeneralTest {
     //    homePage.clickHomePage();
     // }
 }
+

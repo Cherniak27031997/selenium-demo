@@ -1,4 +1,4 @@
-package org.selenium.demo;
+package org.selenium.demo.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,22 +8,22 @@ import org.openqa.selenium.support.PageFactory;
 /**
  * Created by web_systems on 17.03.2017.
  */
-public class ComentPage {
+public class PriorityPage {
     private WebDriver driver;
-    public ComentPage(WebDriver driver) {
+    public PriorityPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
         this.driver = driver;
     }
-    @FindBy(id = "q4")
-    private WebElement comenttext;
+    @FindBy(xpath = "//*[@id=\"Слой_1\"]")
+    private WebElement priorityclick;
 
     @FindBy(xpath = "/html/body/div[5]/div/div/div/div/div/div[2]/div[1]/button")
-    private WebElement comentclick;
+    private WebElement bpriorityclick;
 
-    public void writeComent(String text){
-        comenttext.sendKeys(text);
+    public void clickPriority(){
+        priorityclick.click();
     }
-    public void  clickComent(){
-        comentclick.click();
+    public void clickBpiority(){
+        bpriorityclick.click();
     }
 }

@@ -1,6 +1,5 @@
-package org.selenium.demo;
+package org.selenium.demo.pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,11 +17,8 @@ public class HomePage {
    @FindBy(id = "btn-colorful")
    private WebElement clientButton;
 
-
-
     public void clickHomePage() {
         clientButton.click();
     }
-
 
 }
